@@ -18,6 +18,62 @@ def build_train_op(self):
     gradients = optimizer.compute_gradients(self.framework.loss)
     self.train_op = optimizer.apply_gradients(gradients)
 
+def build_train_mutigpu_op(self):
+    optimizer = self._TRAINER[self.FLAGS.trainer](self.FLAGS.lr)
+    tower_grads = []
+    for d in range(0, self.FLAGS.num_gpu):
+        with tf.device(d):
+            with tf.name_scope("Tower_%d" % d) as scope:
+                loss = self.framework.tower_loss(scope)
+
+                # Reuse variables for the next tower.
+                tf.get_variable_scope().reuse_variables()
+
+                # Get the gradients of this batch to this tower
+                grads = optimizer.compute_gradients(loss)
+
+                # Track up the tower_grads for sum
+                tower_grads.append(grads)
+
+    # Use mean gradient for updating the network
+    grads = average_gradients(tower_grads)
+    self.train_op = optimizer.apply_gradients(grads)
+
+def average_gradients(tower_grads):
+  """Calculate the average gradient for each shared variable across all towers.
+  Note that this function provides a synchronization point across all towers.
+  Args:
+    tower_grads: List of lists of (gradient, variable) tuples. The outer list
+      is over individual gradients. The inner list is over the gradient
+      calculation for each tower.
+  Returns:
+     List of pairs of (gradient, variable) where the gradient has been averaged
+     across all towers.
+  """
+  average_grads = []
+  for grad_and_vars in zip(*tower_grads):
+    # Note that each grad_and_vars looks like the following:
+    #   ((grad0_gpu0, var0_gpu0), ... , (grad0_gpuN, var0_gpuN))
+    grads = []
+    for g, _ in grad_and_vars:
+      # Add 0 dimension to the gradients to represent the tower.
+      expanded_g = tf.expand_dims(g, 0)
+
+      # Append on a 'tower' dimension which we will average over below.
+      grads.append(expanded_g)
+
+    # Average over the 'tower' dimension.
+    grad = tf.concat(axis=0, values=grads)
+    grad = tf.reduce_mean(grad, 0)
+
+    # Keep in mind that the Variables are redundant because they are shared
+    # across towers. So .. we will just return the first tower's pointer to
+    # the Variable.
+    v = grad_and_vars[0][1]
+    grad_and_var = (grad, v)
+    average_grads.append(grad_and_var)
+  return average_grads
+
 def load_from_ckpt(self):
     if self.FLAGS.load < 0: # load lastest ckpt
         with open(self.FLAGS.backup + 'checkpoint', 'r') as f:
