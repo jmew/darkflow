@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c48eb3c3-456b-42e7-bec6-31383a0f5486" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/net/build.py" afterPath="$PROJECT_DIR$/darkflow/net/build.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/net/flow.py" afterPath="$PROJECT_DIR$/darkflow/net/flow.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/net/help.py" afterPath="$PROJECT_DIR$/darkflow/net/help.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py" afterPath="$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,13 +17,25 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="build.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="build.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/darkflow/net/build.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="735">
-                  <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+                <state relative-caret-position="315">
+                  <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#23#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pascal_voc_clean_xml.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="660">
+                  <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+                  <folding>
+                    <element signature="e#42#51#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -32,13 +45,37 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="help.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="help.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/darkflow/net/help.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+                <state relative-caret-position="581">
+                  <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
                   <folding>
-                    <element signature="e#41#81#0" expanded="true" />
+                    <element signature="e#41#50#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="predict.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/darkflow/net/yolo/predict.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="313">
+                  <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#67#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="flow.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/darkflow/net/flow.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="673">
+                  <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -53,6 +90,8 @@
       <find>build_train_op</find>
       <find>setup_meta</find>
       <find>TFNet(</find>
+      <find>np</find>
+      <find>self.build_train_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -61,8 +100,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/darkflow/net/help.py" />
         <option value="$PROJECT_DIR$/darkflow/net/build.py" />
+        <option value="$PROJECT_DIR$/darkflow/net/help.py" />
+        <option value="$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py" />
+        <option value="$PROJECT_DIR$/darkflow/net/flow.py" />
       </list>
     </option>
   </component>
@@ -73,7 +114,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="771" />
+    <option name="x" value="-1149" />
     <option name="y" value="-1058" />
     <option name="width" value="1920" />
     <option name="height" value="1058" />
@@ -149,7 +190,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="771" y="-1058" width="1920" height="1058" extended-state="6" />
+    <frame x="-1149" y="-1058" width="1920" height="1058" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -184,22 +225,52 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/darkflow/net/help.py">
+    <entry file="file://$PROJECT_DIR$/darkflow/net/build.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+        <state relative-caret-position="315">
+          <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
           <folding>
-            <element signature="e#41#81#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/darkflow/net/build.py">
+    <entry file="file://$PROJECT_DIR$/darkflow/net/help.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="22" lean-forward="true" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+        <state relative-caret-position="581">
+          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#41#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/net/yolo/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+          <folding>
+            <element signature="e#42#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/net/flow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,13 +1,14 @@
 """
 tfnet secondary (helper) methods
 """
-from ..utils.loader import create_loader
-from time import time as timer
-import tensorflow as tf
-import numpy as np
-import sys
-import cv2
 import os
+import sys
+from time import time as timer
+
+import cv2
+import tensorflow as tf
+
+from ..utils.loader import create_loader
 
 old_graph_msg = 'Resolving old graph def {} (no guarantee)'
 

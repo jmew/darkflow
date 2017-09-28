@@ -37,34 +37,37 @@ def train(self):
     loss_op = self.framework.loss
 
     for i, (x_batch, datum) in enumerate(batches):
-        if not i: self.say(train_stats.format(
-            self.FLAGS.lr, self.FLAGS.batch,
-            self.FLAGS.epoch, self.FLAGS.save
-        ))
+        try:
+            if not i: self.say(train_stats.format(
+                self.FLAGS.lr, self.FLAGS.batch,
+                self.FLAGS.epoch, self.FLAGS.save
+            ))
 
-        feed_dict = {
-            loss_ph[key]: datum[key] 
-                for key in loss_ph }
-        feed_dict[self.inp] = x_batch
-        feed_dict.update(self.feed)
+            feed_dict = {
+                loss_ph[key]: datum[key]
+                    for key in loss_ph }
+            feed_dict[self.inp] = x_batch
+            feed_dict.update(self.feed)
 
-        fetches = [self.train_op, loss_op, self.summary_op] 
-        fetched = self.sess.run(fetches, feed_dict)
-        loss = fetched[1]
+            fetches = [self.train_op, loss_op, self.summary_op]
+            fetched = self.sess.run(fetches, feed_dict)
+            loss = fetched[1]
 
-        if loss_mva is None: loss_mva = loss
-        loss_mva = .9 * loss_mva + .1 * loss
-        step_now = self.FLAGS.load + i + 1
+            if loss_mva is None: loss_mva = loss
+            loss_mva = .9 * loss_mva + .1 * loss
+            step_now = self.FLAGS.load + i + 1
 
-        self.writer.add_summary(fetched[2], step_now)
+            self.writer.add_summary(fetched[2], step_now)
 
-        form = 'step {} - loss {} - moving ave loss {}'
-        self.say(form.format(step_now, loss, loss_mva))
-        profile += [(loss, loss_mva)]
+            form = 'step {} - loss {} - moving ave loss {}'
+            self.say(form.format(step_now, loss, loss_mva))
+            profile += [(loss, loss_mva)]
 
-        ckpt = (i+1) % (self.FLAGS.save // self.FLAGS.batch)
-        args = [step_now, profile]
-        if not ckpt: _save_ckpt(self, *args)
+            ckpt = (i+1) % (self.FLAGS.save // self.FLAGS.batch)
+            args = [step_now, profile]
+            if not ckpt: _save_ckpt(self, *args)
+        except:
+            pass
 
     if ckpt: _save_ckpt(self, *args)
 
