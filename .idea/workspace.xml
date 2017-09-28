@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c48eb3c3-456b-42e7-bec6-31383a0f5486" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/net/flow.py" afterPath="$PROJECT_DIR$/darkflow/net/flow.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/net/help.py" afterPath="$PROJECT_DIR$/darkflow/net/help.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py" afterPath="$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,7 +20,7 @@
             <entry file="file://$PROJECT_DIR$/darkflow/net/build.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="315">
-                  <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+                  <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#23#0" expanded="true" />
                   </folding>
@@ -29,14 +28,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pascal_voc_clean_xml.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="pascal_voc_clean_xml.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="660">
-                  <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
                   <folding>
                     <element signature="e#42#51#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="tiny-yolo-voc-2c.cfg" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="676">
+                  <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -104,6 +113,7 @@
         <option value="$PROJECT_DIR$/darkflow/net/help.py" />
         <option value="$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py" />
         <option value="$PROJECT_DIR$/darkflow/net/flow.py" />
+        <option value="$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg" />
       </list>
     </option>
   </component>
@@ -145,13 +155,7 @@
             <path>
               <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
               <item name="darkflow" type="462c0819:PsiDirectoryNode" />
-              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
-              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
-              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="cfg" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -163,6 +167,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/cfg" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -228,7 +237,7 @@
     <entry file="file://$PROJECT_DIR$/darkflow/net/build.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="140" column="0" lean-forward="true" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -255,16 +264,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding>
-            <element signature="e#42#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/darkflow/net/flow.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="673">
@@ -272,6 +271,24 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding>
+            <element signature="e#42#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
