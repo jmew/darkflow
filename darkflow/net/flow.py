@@ -99,6 +99,27 @@ def return_predict(self, im):
         })
     return boxesInfo
 
+def batch_inference(self, imgs, ids):
+    # collect images input in the batch
+    inp_feed = list()
+    with tf.device('/cpu:0'):
+        for img in imgs:
+            img = self.framework.resize_input(img)
+            inp_feed.append(np.expand_dims(img, 0))
+
+    # Feed to the net
+    feed_dict = {self.inp: np.concatenate(inp_feed, 0)}
+    out = self.sess.run(self.out, feed_dict)
+
+    # Post processing
+    results = pool.map(lambda p: (lambda i, prediction: self.framework.postprocess_inference(
+                prediction, imgs[i], ids[i]))(*p), enumerate(out))
+
+    pool.close()
+    pool.join()
+
+    return results
+
 import math
 
 def predict(self):

@@ -1,10 +1,12 @@
-from ...utils.im_transform import imcv2_recolor, imcv2_affine_trans
-from ...utils.box import BoundBox, box_iou, prob_compare
-import numpy as np
-import cv2
-import os
 import json
+import os
+
+import cv2
+import numpy as np
+
 from ...cython_utils.cy_yolo_findboxes import yolo_box_constructor
+from ...utils.im_transform import imcv2_recolor, imcv2_affine_trans
+
 
 def _fix(obj, dims, scale, offs):
 	for i in range(1, 5):
@@ -41,7 +43,6 @@ def findboxes(self, net_out):
 	meta, FLAGS = self.meta, self.FLAGS
 	threshold = FLAGS.threshold
 	
-	boxes = []
 	boxes = yolo_box_constructor(meta, net_out, threshold)
 	
 	return boxes
@@ -80,8 +81,6 @@ def postprocess(self, net_out, im, save = True):
 	"""
 	meta, FLAGS = self.meta, self.FLAGS
 	threshold = FLAGS.threshold
-	colors, labels = meta['colors'], meta['labels']
-
 	boxes = self.findboxes(net_out)
 
 	if type(im) is not np.ndarray:

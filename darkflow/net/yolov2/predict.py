@@ -1,13 +1,11 @@
-import numpy as np
-import math
-import cv2
-import os
 import json
-#from scipy.special import expit
-#from utils.box import BoundBox, box_iou, prob_compare
-#from utils.box import prob_compare2, box_intersection
-from ...utils.box import BoundBox
+import os
+
+import cv2
+import numpy as np
+
 from ...cython_utils.cy_yolo2_findboxes import box_constructor
+
 
 def expit(x):
 	return 1. / (1. + np.exp(-x))
@@ -23,6 +21,26 @@ def findboxes(self, net_out):
 	boxes = list()
 	boxes=box_constructor(meta,net_out)
 	return boxes
+
+
+def postprocess_inference(self, net_out, img, id):
+	"""
+	Takes net output, draw predictions, save to disk
+	"""
+	threshold = self.meta['thresh']
+	boxes = self.findboxes(net_out)
+
+	h, w, _ = img.shape
+	results = []
+	for b in boxes:
+		boxResults = self.process_box(b, h, w, threshold)
+		if boxResults is None:
+			continue
+		_, _, _, _, mess, _, confidence = boxResults
+		results.append(
+			{"id" :  id, "label": mess, "confidence": float('%.2f' % confidence)})
+
+	return results
 
 def postprocess(self, net_out, im, save = True):
 	"""
