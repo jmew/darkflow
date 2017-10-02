@@ -2,8 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c48eb3c3-456b-42e7-bec6-31383a0f5486" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1.1/person-bottle.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1.1/tiny-coco.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1.1/tiny-yolo-4c.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1.1/tiny-yolov1.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1.1/yolo-coco.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1.1/yolov1.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/tiny-old.profile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/tiny.profile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/yolo-2c.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/yolo-4c.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/yolo-full.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/yolo-small.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/yolo-tiny-extract.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/yolo-tiny-extract_.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/yolo-tiny.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cfg/v1/yolo-tiny4c.cfg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/defaults.py" afterPath="$PROJECT_DIR$/darkflow/defaults.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/net/build.py" afterPath="$PROJECT_DIR$/darkflow/net/build.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/net/framework.py" afterPath="$PROJECT_DIR$/darkflow/net/framework.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/net/help.py" afterPath="$PROJECT_DIR$/darkflow/net/help.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/darkflow/net/yolov2/train.py" afterPath="$PROJECT_DIR$/darkflow/net/yolov2/train.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,39 +33,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.43857494">
       <split-first>
         <leaf>
-          <file leaf-file-name="build.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="build.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/darkflow/net/build.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+                <state relative-caret-position="385">
+                  <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
                   <folding>
                     <element signature="e#0#23#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="pascal_voc_clean_xml.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-                  <folding>
-                    <element signature="e#42#51#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tiny-yolo-voc-2c.cfg" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="676">
-                  <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -54,38 +52,56 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="help.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/darkflow/net/help.py">
+          <file leaf-file-name="tiny-yolo-voc-2c.cfg" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="581">
-                  <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#41#50#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="754">
+                  <caret line="128" column="9" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="9" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="predict.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/darkflow/net/yolo/predict.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="313">
-                  <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#67#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="flow.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="flow.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/darkflow/net/flow.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="673">
-                  <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+                <state relative-caret-position="294">
+                  <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="framework.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/darkflow/net/framework.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="570">
+                  <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="cli.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/darkflow/cli.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="105">
+                  <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+                  <folding>
+                    <element signature="e#0#62#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="defaults.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/darkflow/defaults.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="795">
+                  <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -99,8 +115,30 @@
       <find>build_train_op</find>
       <find>setup_meta</find>
       <find>TFNet(</find>
+      <find>def return_p</find>
+      <find>json</find>
+      <find>math</find>
+      <find>def process_box</find>
+      <find>def box_constructor</find>
+      <find>def preprocess</find>
+      <find>def shuffle(</find>
       <find>np</find>
+      <find>batch_norm</find>
+      <find>gpu</find>
+      <find>build</find>
+      <find>process_box</find>
       <find>self.build_train_</find>
+      <find>yolov2</find>
+      <find>tower_loss</find>
+      <find>tensorflow</find>
+      <find>self.FLAGS</find>
+      <find>net_out_reshape</find>
+      <find>class_sca</find>
+      <find>def return_predict</find>
+      <find>class TFNET</find>
+      <find>return_predict</find>
+      <find>postprocess</find>
+      <find>pool</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,11 +147,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/darkflow/net/build.py" />
-        <option value="$PROJECT_DIR$/darkflow/net/help.py" />
         <option value="$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py" />
-        <option value="$PROJECT_DIR$/darkflow/net/flow.py" />
         <option value="$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg" />
+        <option value="$PROJECT_DIR$/darkflow/net/flow.py" />
+        <option value="$PROJECT_DIR$/darkflow/net/yolo/predict.py" />
+        <option value="$PROJECT_DIR$/darkflow/net/yolov2/predict.py" />
+        <option value="$PROJECT_DIR$/darkflow/cython_utils/cy_yolo2_findboxes.pyx" />
+        <option value="$PROJECT_DIR$/darkflow/defaults.py" />
+        <option value="$PROJECT_DIR$/darkflow/net/yolov2/train.py" />
+        <option value="$PROJECT_DIR$/darkflow/net/help.py" />
+        <option value="$PROJECT_DIR$/darkflow/net/build.py" />
+        <option value="$PROJECT_DIR$/darkflow/net/framework.py" />
       </list>
     </option>
   </component>
@@ -156,6 +200,47 @@
               <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
               <item name="darkflow" type="462c0819:PsiDirectoryNode" />
               <item name="cfg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="yolov2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+              <item name="sample_img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="darkflow" type="b2602c69:ProjectViewProjectNode" />
+              <item name="darkflow" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="training" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -208,7 +293,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15208334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.122395836" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -234,60 +319,168 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/darkflow/net/build.py">
+    <entry file="file://$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/net/yolo/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="75" column="47" lean-forward="false" selection-start-line="75" selection-start-column="47" selection-end-line="75" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/coco.names">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-329">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cfg/tiny-yolo-4c.cfg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/version.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/training/annotations/1.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_darkflow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/cli.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
           <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/defaults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/cython_utils/cy_yolo2_findboxes.pyx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="66" column="48" lean-forward="false" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/net/yolo/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="112" column="43" lean-forward="false" selection-start-line="112" selection-start-column="37" selection-end-line="112" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/net/yolov2/predict.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="14" lean-forward="false" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/net/yolov2/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="48" column="45" lean-forward="true" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/darkflow/net/help.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="42" column="24" lean-forward="false" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        <state relative-caret-position="184">
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
           <folding>
             <element signature="e#41#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/darkflow/net/yolo/predict.py">
+    <entry file="file://$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="61" column="0" lean-forward="false" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="754">
+          <caret line="128" column="9" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/darkflow/net/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
           <folding>
-            <element signature="e#0#67#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/darkflow/net/flow.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="69" column="16" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+        <state relative-caret-position="294">
+          <caret line="93" column="31" lean-forward="true" selection-start-line="93" selection-start-column="31" selection-end-line="93" selection-end-column="31" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/darkflow/utils/pascal_voc_clean_xml.py">
+    <entry file="file://$PROJECT_DIR$/darkflow/net/framework.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
-          <folding>
-            <element signature="e#42#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cfg/tiny-yolo-voc-2c.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+        <state relative-caret-position="570">
+          <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
           <folding />
         </state>
       </provider>

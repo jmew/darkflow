@@ -39,6 +39,7 @@ class YOLOv2(framework):
     loss = yolov2.train.loss
     is_inp = yolo.misc.is_inp
     postprocess = yolov2.predict.postprocess
+    postprocess_inference = yolov2.predict.postprocess_inference
     _batch = yolov2.data._batch
     resize_input = yolo.predict.resize_input
     findboxes = yolov2.predict.findboxes

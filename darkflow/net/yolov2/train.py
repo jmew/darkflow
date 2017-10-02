@@ -9,6 +9,49 @@ import math
 def expit_tensor(x):
 	return 1. / (1. + tf.exp(-x))
 
+
+def tower_loss(scope):
+  """Calculate the total loss on a single tower running the CIFAR model.
+  Args:
+    scope: unique prefix string identifying the CIFAR tower, e.g. 'tower_0'
+  Returns:
+     Tensor of shape [] containing the total loss for a batch of data
+  """
+  # Get images and labels for CIFAR-10.
+  images, labels = cifar10.distorted_inputs()
+
+  # Build inference Graph.
+  logits = cifar10.inference(images)
+
+  # Build the portion of the Graph calculating the losses. Note that we will
+  # assemble the total_loss using a custom function below.
+  _ = cifar10.loss(logits, labels)
+
+  # Assemble all of the losses for the current tower only.
+  losses = tf.get_collection('losses', scope)
+
+  # Calculate the total loss for the current tower.
+  total_loss = tf.add_n(losses, name='total_loss')
+
+  # Compute the moving average of all individual losses and the total loss.
+  loss_averages = tf.train.ExponentialMovingAverage(0.9, name='avg')
+  loss_averages_op = loss_averages.apply(losses + [total_loss])
+
+  # Attach a scalar summary to all individual losses and the total loss; do the
+  # same for the averaged version of the losses.
+  for l in losses + [total_loss]:
+    # Remove 'tower_[0-9]/' from the name in case this is a multi-GPU training
+    # session. This helps the clarity of presentation on tensorboard.
+    loss_name = re.sub('%s_[0-9]*/' % cifar10.TOWER_NAME, '', l.op.name)
+    # Name each loss as '(raw)' and name the moving average version of the loss
+    # as the original loss name.
+    tf.scalar_summary(loss_name +' (raw)', l)
+    tf.scalar_summary(loss_name, loss_averages.average(l))
+
+  with tf.control_dependencies([loss_averages_op]):
+    total_loss = tf.identity(total_loss)
+  return total_loss
+
 def loss(self, net_out):
     """
     Takes net.out and placeholders value
@@ -105,3 +148,4 @@ def loss(self, net_out):
     loss = tf.reduce_sum(loss, 1)
     self.loss = .5 * tf.reduce_mean(loss)
     tf.summary.scalar('{} loss'.format(m['model']), self.loss)
+    return self.loss

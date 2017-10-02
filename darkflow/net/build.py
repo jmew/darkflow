@@ -29,6 +29,7 @@ class TFNet(object):
 	camera = help.camera
 	predict = flow.predict
 	return_predict = flow.return_predict
+	batch_inference = flow.batch_inference
 	to_darknet = help.to_darknet
 	build_train_op = help.build_train_op
 	build_train_mutigpu_op = help.build_train_mutigpu_op
@@ -75,12 +76,12 @@ class TFNet(object):
 
 		if self.FLAGS.num_gpus:
 			self.say('\nUsing %d gpus', self.FLAGS.num_gpus)
-			for i in self.FLAGS.num_gpus:
+			for i in range(0, self.FLAGS.num_gpus):
 				with tf.device('/gpu:%d' % i):
 					with self.graph.as_default() as g:
 						self.build_forward()
 						self.setup_meta_ops()
-				self.say('Finished in {}s\n'.format(time.time() - start))
+			self.say('Finished in {}s\n'.format(time.time() - start))
 
 		else:
 			with tf.device(device_name):

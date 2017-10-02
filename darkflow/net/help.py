@@ -22,10 +22,10 @@ def build_train_op(self):
 def build_train_mutigpu_op(self):
     optimizer = self._TRAINER[self.FLAGS.trainer](self.FLAGS.lr)
     tower_grads = []
-    for d in range(0, self.FLAGS.num_gpu):
+    for d in range(0, self.FLAGS.num_gpus):
         with tf.device(d):
             with tf.name_scope("Tower_%d" % d) as scope:
-                loss = self.framework.tower_loss(scope)
+                loss = self.framework.tower_loss(scope) # TODO fix
 
                 # Reuse variables for the next tower.
                 tf.get_variable_scope().reuse_variables()
