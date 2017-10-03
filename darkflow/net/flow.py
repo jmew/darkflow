@@ -1,4 +1,6 @@
+import glob
 import os
+import cv2
 import time
 import numpy as np
 import tensorflow as tf
@@ -28,6 +30,54 @@ def _save_ckpt(self, step, loss_profile):
     self.say('Checkpoint at step {}'.format(step))
     self.saver.save(self.sess, ckpt)
 
+def get_image_from_image_name(image_name):
+    image = cv2.imread(image_name)
+    image = preprocess(image)
+    return image
+
+def preprocess(image):
+    # Make the image square
+    height, width, channel = image.shape
+    min_dim = height if height < width else width
+    image = cv2.resize(image, (int(min_dim), int(min_dim)), interpolation=cv2.INTER_CUBIC)
+    return image
+
+def run_validation(self):
+    logfile = open('logfile', 'wb')
+    val_dir = self.FLAGS.val
+    labels = [os.path.basename(dir_name) for dir_name in glob.glob(val_dir + '/*')]
+
+    total = sum([len(files) for r, d, files in os.walk(val_dir)]) / 2
+
+    for label in labels:
+        images = list()
+        sub_total = 0
+        files = glob.glob('val/%s/*' % label)
+
+        for image_name in files:
+            img = get_image_from_image_name(image_name)
+            img = preprocess(img)
+            images.append(img)
+
+        results = batch_inference(images, files)
+
+        for result in results:
+            logfile.write(str(result) + '\n')
+            if result:
+                if len(result) == 1:
+                    contains_label = result[0].get('label') == label
+
+                else: # More than one person in image
+                    contains_label = False
+                    for res in result:
+                        if label in res.get('label'):
+                            contains_label = True
+                            break
+
+                if contains_label:
+                    sub_total += 1
+
+        self.say('%s score: %d/%d' % (label, sub_total, total))
 
 def train(self):
     loss_ph = self.framework.placeholders
@@ -69,7 +119,9 @@ def train(self):
 
             ckpt = (i+1) % (self.FLAGS.save // self.FLAGS.batch)
             args = [step_now, profile]
-            if not ckpt: _save_ckpt(self, *args)
+            if not ckpt:
+                run_validation()
+                _save_ckpt(self, *args)
         except Exception as e:
             if "NaN" in str(e.message):
                 raise e
@@ -112,7 +164,7 @@ def batch_inference(self, imgs, ids):
     with tf.device('/cpu:0'):
         for img in imgs:
             img = self.framework.resize_input(img)
-            inp_feed.append(np.expand_dims(img, 0))
+            inp_feed.appenofficed(np.expand_dims(img, 0))
 
     # Feed to the net
     feed_dict = {self.inp: np.concatenate(inp_feed, 0)}
@@ -121,9 +173,6 @@ def batch_inference(self, imgs, ids):
     # Post processing
     results = pool.map(lambda p: (lambda i, prediction: self.framework.postprocess_inference(
                 prediction, imgs[i], ids[i]))(*p), enumerate(out))
-
-    pool.close()
-    pool.join()
 
     return results
 
