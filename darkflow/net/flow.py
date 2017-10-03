@@ -35,6 +35,7 @@ def train(self):
 
     batches = self.framework.shuffle()
     loss_op = self.framework.loss
+    ckpt = 0
 
     for i, (x_batch, datum) in enumerate(batches):
         try:
@@ -57,6 +58,9 @@ def train(self):
             loss_mva = .9 * loss_mva + .1 * loss
             step_now = self.FLAGS.load + i + 1
 
+            if math.isnan(loss) or math.isnan(loss_mva):
+                raise Exception('NaN:%d' % ckpt)
+
             self.writer.add_summary(fetched[2], step_now)
 
             form = 'step {} - loss {} - moving ave loss {}'
@@ -66,8 +70,11 @@ def train(self):
             ckpt = (i+1) % (self.FLAGS.save // self.FLAGS.batch)
             args = [step_now, profile]
             if not ckpt: _save_ckpt(self, *args)
-        except:
-            pass
+        except Exception as e:
+            if "NaN" in str(e.message):
+                raise e
+            else:
+                pass
 
     if ckpt: _save_ckpt(self, *args)
 
