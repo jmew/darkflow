@@ -28,7 +28,7 @@ class argHandler(dict):
         self.define('keep', None,'Number of most recent training results to save')
         self.define('batch', 40, 'batch size')
         self.define('epoch', 1000, 'number of epoch')
-        self.define('save', 4000, 'save checkpoint every ? training examples')
+        self.define('save', 6000, 'save checkpoint every ? training examples')
         self.define('queue', 1, 'process demo in batch')
         self.define('json', False, 'Outputs bounding box information in json format.')
         self.define('pbLoad', '', 'path to .pb protobuf file (metaLoad must also be specified)')
