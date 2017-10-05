@@ -166,7 +166,7 @@ class TFNet(object):
 
 		if not self.ntrain: return
 		self.saver = tf.train.Saver(tf.global_variables(),
-									max_to_keep=self.FLAGS.keep)
+									max_to_keep=int(self.FLAGS.keep))
 		if self.FLAGS.load != 0: self.load_from_ckpt()
 
 		if self.FLAGS.summary is not None:

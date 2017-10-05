@@ -50,6 +50,7 @@ def run_validation(self):
     total = sum([len(files) for r, d, files in os.walk(val_dir)]) / 2
 
     for label in labels:
+        logfile.write('----------------------------------------------------\n')
         images = list()
         sub_total = 0
         files = glob.glob('val/%s/*' % label)
