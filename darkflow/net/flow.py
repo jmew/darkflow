@@ -120,9 +120,7 @@ def train(self):
 
             ckpt = (i+1) % (self.FLAGS.save // self.FLAGS.batch)
             args = [step_now, profile]
-            if not ckpt:
-                _save_ckpt(self, *args)
-                run_validation()
+            if not ckpt: _save_ckpt(self, *args)
         except Exception as e:
             if "NaN" in str(e.message):
                 raise e
