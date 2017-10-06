@@ -39,8 +39,8 @@ def cliHandler(args):
                     output = str(time.strftime("%c")) + ': NaN exception at ckpt - %d' + '\n'
                     log_file.write(output)
 
-            if not FLAGS.savepb:
-                exit('Training finished, exit.')
+        if not FLAGS.savepb:
+            exit('Training finished, exit.')
 
     if FLAGS.savepb:
         print('Rebuild a constant version ...')
