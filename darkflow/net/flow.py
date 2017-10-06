@@ -122,10 +122,7 @@ def train(self):
             args = [step_now, profile]
             if not ckpt:
                 _save_ckpt(self, *args)
-                try:
-                    run_validation(self)
-                except:
-                    pass
+
         except Exception as e:
             if "NaN" in str(e.message):
                 raise e
