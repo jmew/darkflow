@@ -110,7 +110,7 @@ def train(self):
             step_now = self.FLAGS.load + i + 1
 
             if math.isnan(loss) or math.isnan(loss_mva):
-                raise Exception('NaN:%d' % ckpt)
+                raise Exception('NaN:%d' % (i - ckpt))
 
             self.writer.add_summary(fetched[2], step_now)
 
@@ -120,7 +120,12 @@ def train(self):
 
             ckpt = (i+1) % (self.FLAGS.save // self.FLAGS.batch)
             args = [step_now, profile]
-            if not ckpt: _save_ckpt(self, *args)
+            if not ckpt:
+                _save_ckpt(self, *args)
+                try:
+                    run_validation(self)
+                except:
+                    pass
         except Exception as e:
             if "NaN" in str(e.message):
                 raise e

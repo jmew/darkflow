@@ -122,14 +122,14 @@ class TFNet(object):
 		# Build the forward pass
 		state = identity(self.inp)
 		roof = self.num_layer - self.ntrain
-		#self.say(HEADER, LINE)
+		self.say(HEADER, LINE)
 		for i, layer in enumerate(self.darknet.layers):
 			scope = '{}-{}'.format(str(i), layer.type)
 			args = [layer, state, i, roof, self.feed]
 			state = op_create(*args)
 			mess = state.verbalise()
 			self.say(mess)
-		#self.say(LINE)
+		self.say(LINE)
 
 		self.top = state
 		self.out = tf.identity(state.out, name='output')
@@ -137,7 +137,7 @@ class TFNet(object):
 	def setup_meta_ops(self):
 		cfg = dict({
 			'allow_soft_placement': False,
-			'log_device_placement': True
+			'log_device_placement': False
 		})
 
 		utility = min(self.FLAGS.gpu, 1.)
@@ -153,6 +153,7 @@ class TFNet(object):
 		if self.FLAGS.train:
 			if self.FLAGS.num_gpus:
 				cfg['device_count'] = {'GPU', self.FLAGS.num_gpus}
+				cfg['log_device_placement'] = True
 				self.build_train_mutigpu_op()
 			else:
 				self.build_train_op()

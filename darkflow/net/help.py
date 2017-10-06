@@ -14,7 +14,6 @@ old_graph_msg = 'Resolving old graph def {} (no guarantee)'
 
 def build_train_op(self):
     self.framework.loss(self.out)
-    self.say('Building {} train op'.format(self.meta['model']))
     optimizer = self._TRAINER[self.FLAGS.trainer](self.FLAGS.lr)
     gradients = optimizer.compute_gradients(self.framework.loss)
     self.train_op = optimizer.apply_gradients(gradients)
