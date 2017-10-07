@@ -33,7 +33,7 @@ def cliHandler(args):
                 print('Enter training ...'); tfnet.train()
             except Exception as e:
                 if "NaN" in str(e.message):
-                    FLAGS.load = int(str(e.message)[4:])
+                    FLAGS.load = int(-1)
                     tfnet = TFNet(FLAGS)
                     print('NaN Exception')
                     output = str(time.strftime("%c")) + ': NaN exception at ckpt - %d' + '\n'
