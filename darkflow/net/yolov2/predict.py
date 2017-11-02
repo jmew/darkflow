@@ -36,9 +36,9 @@ def postprocess_inference(self, net_out, img, id):
 		boxResults = self.process_box(b, h, w, threshold)
 		if boxResults is None:
 			continue
-		_, _, _, _, mess, _, confidence = boxResults
+		left, right, top, bot, mess, max_indx, confidence = boxResults
 		results.append(
-			{"id" :  id, "label": mess, "confidence": float('%.2f' % confidence)})
+			{"id" :  id, "label": mess, "confidence": float('%.2f' % confidence), "topleft": {"x": left, "y": top}, "bottomright": {"x": right, "y": bot}})
 
 	return results
 

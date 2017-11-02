@@ -164,7 +164,6 @@ def batch_inference(self, imgs, ids):
     inp_feed = list()
     with tf.device('/cpu:0'):
         for img in imgs:
-            img = self.framework.resize_input(img)
             inp_feed.append(np.expand_dims(img, 0))
 
     # Feed to the net

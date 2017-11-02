@@ -32,6 +32,7 @@ def cliHandler(args):
             try:
                 print('Enter training ...'); tfnet.train()
             except Exception as e:
+                print(e.message)
                 if "NaN" in str(e.message):
                     FLAGS.load = int(str(e.message)[4:])
                     tfnet = TFNet(FLAGS)
@@ -39,8 +40,8 @@ def cliHandler(args):
                     output = str(time.strftime("%c")) + ': NaN exception at ckpt - %d' + '\n'
                     log_file.write(output)
 
-        if not FLAGS.savepb:
-            exit('Training finished, exit.')
+            if not FLAGS.savepb:
+                exit('Training finished, exit.')
 
     if FLAGS.savepb:
         print('Rebuild a constant version ...')
